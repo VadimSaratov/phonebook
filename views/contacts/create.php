@@ -8,7 +8,6 @@ use yii\helpers\Html;
 /* @var $modelsNumbers app\models\Numbers */
 
 $this->title = 'Добавить контакт';
-$this->params['breadcrumbs'][] = ['label' => 'Контакты', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="contacts-create">

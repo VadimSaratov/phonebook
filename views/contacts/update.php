@@ -7,7 +7,6 @@ use yii\helpers\Html;
 /* @var $modelsNumbers app\models\Contacts */
 
 $this->title = "Редактирование контакта: {$model->name} {$model->surname}";
-$this->params['breadcrumbs'][] = ['label' => 'Контакты', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Редактирование';
 ?>

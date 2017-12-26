@@ -30,7 +30,7 @@ class Numbers extends \yii\db\ActiveRecord
     {
         return [
             [['contact_id'], 'integer'],
-            [['number_val'], 'required', 'message' => '{attribute} не может быть пустым!'],
+            [['number_val'], 'required', 'message' => 'Номер не может быть пустым!'],
             [['number_val'], 'integer', 'message' => 'введите только числа!'],
             [['contact_id'], 'exist', 'skipOnError' => true, 'targetClass' => Contacts::className(), 'targetAttribute' => ['contact_id' => 'id']],
         ];

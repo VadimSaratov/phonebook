@@ -39,7 +39,7 @@ $this->registerJs($js);
     <?= $form->field($model, 'patronymic')->textInput(['maxlength' => true]) ?>
 
     <div class="panel panel-default">
-        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Номера телефона</h4></div>
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-earphone"></i> Номера телефонов</h4></div>
         <div class="panel-body">
 			<?php DynamicFormWidget::begin([
 				'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
@@ -85,7 +85,7 @@ $this->registerJs($js);
 
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

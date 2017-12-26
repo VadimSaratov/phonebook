@@ -45,7 +45,6 @@ class ContactsController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -59,7 +58,7 @@ class ContactsController extends Controller
     public function actionView($id)
     {
 	    $model = $this->findModel($id);
-	    $numbers = $model->numbers;
+	    $numbers = Contacts::find()->one()->getNumbers()->asArray()->all();
         return $this->render('view', [
             'model' => $model,
             'numbers' => $numbers,
